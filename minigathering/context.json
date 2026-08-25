@@ -1,0 +1,12 @@
+{
+  "port_vid_pid": [
+    "10c4:ea60",
+    "1a86:7523",
+    "1a86:55d4"
+  ],
+  "cflags": [
+    "-I\"{board}/include\"",
+    "-DESP_PLATFORM"
+  ],
+  "libflags": []
+}
