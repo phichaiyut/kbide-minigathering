@@ -1,0 +1,22 @@
+C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\boards\minigathering\build\ff-ff-ff-ff-ff-ff\MQTT.o: \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\include\MQTT.cpp \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\include\MQTT.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/stdint.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/machine/_default_types.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/sys/features.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/sys/_intsup.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/pgmspace.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/Client.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/Print.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/WString.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/stdlib.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/machine/stdlib.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/alloca.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/string.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/sys/string.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/Printable.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/Stream.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\sdk\include\newlib/inttypes.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/IPAddress.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/WString.h \
+ C:\Users\INKPhichaiyut\AppData\Local\Programs\kbide\platforms\arduino-esp32\lib\include/Printable.h
