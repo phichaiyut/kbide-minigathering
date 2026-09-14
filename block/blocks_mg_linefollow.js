@@ -3,7 +3,7 @@ module.exports = function(Blockly){
   var COLOUR = 15;
   var SELECT_OPTIONS = [
     ["'s' (หยุด)", "s"],
-    ["'p' (หยุดชั่วคราว)", "p"],
+    ["'p' (เดินข้ามแยก)", "p"],
     ["'l' (เลี้ยวซ้าย)", "l"],
     ["'r' (เลี้ยวขวา)", "r"],
     ["'f' (เดินหน้าต่อ)", "f"],
@@ -79,7 +79,7 @@ module.exports = function(Blockly){
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(COLOUR);
-      this.setTooltip("TrackSelect(spd, select) — Performs a junction action immediately (stop/pause/turn left/turn right/continue/etc.) — the same action every Follow Line block runs when it finishes.\n\nภาษาไทย: ทำคำสั่งที่ทางแยกทันที (หยุด/รอ/เลี้ยวซ้าย/เลี้ยวขวา/วิ่งต่อ ฯลฯ) เป็นคำสั่งเดียวกับที่บล็อกเดินตามเส้นด้านบนเรียกใช้ตอนจบ");
+      this.setTooltip("TrackSelect(spd, select) — Performs a junction action immediately (stop/drive across/turn left/turn right/continue/etc.) — the same action every Follow Line block runs when it finishes.\n\nภาษาไทย: ทำคำสั่งที่ทางแยกทันที (หยุด/เดินข้ามแยก/เลี้ยวซ้าย/เลี้ยวขวา/วิ่งต่อ ฯลฯ) เป็นคำสั่งเดียวกับที่บล็อกเดินตามเส้นด้านบนเรียกใช้ตอนจบ");
       this.setHelpUrl("");
     }
   };

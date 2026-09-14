@@ -17,11 +17,11 @@ ${VARIABLE}
 // your own robot, or drag "Speed & PID" blocks into Setup to override them)
 void SetKpKd() {
   setKpKd(SPD_10, 0.030, 0.30);
-  setKpKd(SPD_20, 0.030, 0.30);
-  setKpKd(SPD_30, 0.030, 0.30);
-  setKpKd(SPD_40, 0.020, 0.20);
-  setKpKd(SPD_50, 0.030, 0.60);
-  setKpKd(SPD_60, 0.050, 0.50);
+  setKpKd(SPD_20, 0.035, 0.35);
+  setKpKd(SPD_30, 0.040, 0.40);
+  setKpKd(SPD_40, 0.045, 0.45);
+  setKpKd(SPD_50, 0.050, 0.50);
+  setKpKd(SPD_60, 0.055, 0.55);
   setKpKd(SPD_70, 0.060, 0.60);
   setKpKd(SPD_80, 0.065, 0.65);
   setKpKd(SPD_90, 0.070, 0.70);
