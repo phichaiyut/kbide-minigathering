@@ -3,7 +3,7 @@ function num(name, value) {
 }
 
 module.exports = {
-    name: "Servo",
+    name: "เซอร์โว (Servo)",
     index: 18,
     color: "170",
     icon: "/static/icons/icons8_disconnected_96px.png",
@@ -18,9 +18,9 @@ module.exports = {
         "mg_servo_open",
         "mg_servo_close_small",
         "mg_servo_close_big",
-        { xml: `<sep gap="16"></sep><label text="Presets" web-class="headline"></label>` },
+        { xml: `<sep gap="16"></sep><label text="ท่าสำเร็จรูป" web-class="headline"></label>` },
         { xml: `<block type="mg_set_servo_preset">${num('VALUE', 90)}</block>` },
-        { xml: `<sep gap="16"></sep><label text="Calibration" web-class="headline"></label>` },
+        { xml: `<sep gap="16"></sep><label text="คาลิเบรต" web-class="headline"></label>` },
         "mg_serial_servo_control"
     ]
 };

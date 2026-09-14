@@ -3,7 +3,7 @@ function num(name, value) {
 }
 
 module.exports = {
-    name: "Speed &amp; PID",
+    name: "ความเร็ว/PID (Speed &amp; PID)",
     index: 15,
     color: "55",
     icon: "/static/icons/icons8_process_96px.png",

@@ -19,22 +19,22 @@ module.exports = function(Blockly){
     };
   }
 
-  zeroArgBlock('mg_read_sensor', "ReadSensor", "ReadSensor() — Reads raw analog values from all 6 line sensors and stores them internally.\n\nภาษาไทย: อ่านค่าดิบ (analog) จากเซนเซอร์เส้นทั้ง 6 ตัว เก็บไว้ใช้ภายใน");
-  zeroArgBlock('mg_read_calibrate', "ReadCalibrate", "ReadCalibrate() — Reads the line sensors and converts them to a 0-1000 scale based on the calibration.\n\nภาษาไทย: อ่านค่าเซนเซอร์เส้นแล้วแปลงเป็นสเกล 0-1000 ตามค่าที่คาลิเบรตไว้");
-  zeroArgBlock('mg_save_calibrate', "SaveCalibrateToEEPROM", "SaveCalibrateToEEPROM() — Saves the calibrated Min/Max sensor values to permanent memory (EEPROM).\n\nภาษาไทย: บันทึกค่า Min/Max ของเซนเซอร์เส้นที่คาลิเบรตไว้ ลงหน่วยความจำถาวร (EEPROM)");
-  zeroArgBlock('mg_load_calibrate', "LoadCalibrateFromEEPROM", "LoadCalibrateFromEEPROM() — Loads previously saved Min/Max sensor values back.\n\nภาษาไทย: โหลดค่า Min/Max ของเซนเซอร์เส้นที่เคยบันทึกไว้กลับมาใช้");
-  zeroArgBlock('mg_serial_sensor', "SerialSensor", "SerialSensor() — Continuously prints raw line-sensor values to the Serial Monitor until the button is pressed.\n\nภาษาไทย: แสดงค่าดิบของเซนเซอร์เส้นทาง Serial Monitor ต่อเนื่องจนกว่าจะกดปุ่ม");
-  zeroArgBlock('mg_serial_calibrate', "SerialCalibrate", "SerialCalibrate() — Continuously prints calibrated line-sensor values (0-1000) to the Serial Monitor until the button is pressed.\n\nภาษาไทย: แสดงค่าเซนเซอร์เส้นหลังคาลิเบรต (0-1000) ทาง Serial Monitor ต่อเนื่องจนกว่าจะกดปุ่ม");
-  zeroArgBlock('mg_serial_distance', "SerialDistance", "SerialDistance() — Continuously prints the measured ultrasonic distance to the Serial Monitor. Never returns.\n\nภาษาไทย: แสดงระยะทางจากเซนเซอร์อัลตราโซนิกทาง Serial Monitor ต่อเนื่อง ไม่มีการคืนค่ากลับ");
+  zeroArgBlock('mg_read_sensor', "อ่านเซนเซอร์ (ReadSensor)", "ReadSensor() — Reads raw analog values from all 6 line sensors and stores them internally.\n\nภาษาไทย: อ่านค่าดิบ (analog) จากเซนเซอร์เส้นทั้ง 6 ตัว เก็บไว้ใช้ภายใน");
+  zeroArgBlock('mg_read_calibrate', "อ่านค่าคาลิเบรต (ReadCalibrate)", "ReadCalibrate() — Reads the line sensors and converts them to a 0-1000 scale based on the calibration.\n\nภาษาไทย: อ่านค่าเซนเซอร์เส้นแล้วแปลงเป็นสเกล 0-1000 ตามค่าที่คาลิเบรตไว้");
+  zeroArgBlock('mg_save_calibrate', "บันทึกค่าคาลิเบรต (SaveCalibrateToEEPROM)", "SaveCalibrateToEEPROM() — Saves the calibrated Min/Max sensor values to permanent memory (EEPROM).\n\nภาษาไทย: บันทึกค่า Min/Max ของเซนเซอร์เส้นที่คาลิเบรตไว้ ลงหน่วยความจำถาวร (EEPROM)");
+  zeroArgBlock('mg_load_calibrate', "โหลดค่าคาลิเบรต (LoadCalibrateFromEEPROM)", "LoadCalibrateFromEEPROM() — Loads previously saved Min/Max sensor values back.\n\nภาษาไทย: โหลดค่า Min/Max ของเซนเซอร์เส้นที่เคยบันทึกไว้กลับมาใช้");
+  zeroArgBlock('mg_serial_sensor', "แสดงค่าเซนเซอร์ (SerialSensor)", "SerialSensor() — Continuously prints raw line-sensor values to the Serial Monitor until the button is pressed.\n\nภาษาไทย: แสดงค่าดิบของเซนเซอร์เส้นทาง Serial Monitor ต่อเนื่องจนกว่าจะกดปุ่ม");
+  zeroArgBlock('mg_serial_calibrate', "แสดงค่าคาลิเบรต (SerialCalibrate)", "SerialCalibrate() — Continuously prints calibrated line-sensor values (0-1000) to the Serial Monitor until the button is pressed.\n\nภาษาไทย: แสดงค่าเซนเซอร์เส้นหลังคาลิเบรต (0-1000) ทาง Serial Monitor ต่อเนื่องจนกว่าจะกดปุ่ม");
+  zeroArgBlock('mg_serial_distance', "แสดงระยะทาง (SerialDistance)", "SerialDistance() — Continuously prints the measured ultrasonic distance to the Serial Monitor. Never returns.\n\nภาษาไทย: แสดงระยะทางจากเซนเซอร์อัลตราโซนิกทาง Serial Monitor ต่อเนื่อง ไม่มีการคืนค่ากลับ");
 
   Blockly.Blocks['mg_calibrate_sensor'] = {
     init: function() {
       this.appendValueInput("PAUSE")
           .setCheck("Number")
-          .appendField("CalibrateSensor  pauseTime");
+          .appendField("คาลิเบรตเซนเซอร์ (CalibrateSensor)  เวลาหยุด");
       this.appendValueInput("SAMPLES")
           .setCheck("Number")
-          .appendField("samples");
+          .appendField("จำนวนตัวอย่าง");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -48,7 +48,7 @@ module.exports = function(Blockly){
     init: function() {
       this.appendValueInput("X")
           .setCheck("Number")
-          .appendField("RefLineValue  x");
+          .appendField("ขีดแบ่งเส้น (RefLineValue)  ค่า");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -61,10 +61,10 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_track_line_color'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("TrackLineColor")
+          .appendField("สีเส้น (TrackLineColor)")
           .appendField(new Blockly.FieldDropdown([
-            ["0 (black surface, white line)", "0"],
-            ["1 (white surface, black line)", "1"]
+            ["0 (พื้นดำ เส้นขาว)", "0"],
+            ["1 (พื้นขาว เส้นดำ)", "1"]
           ]), "COLOR");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
@@ -77,7 +77,7 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_sensor_value_min'] = {
     init: function() {
-      this.appendDummyInput().appendField("SensorValueMin");
+      this.appendDummyInput().appendField("ค่า Min เซนเซอร์ (SensorValueMin)");
       for (var i = 0; i <= 5; i++) {
         this.appendValueInput("F" + i).setCheck("Number").appendField("minF" + i);
       }
@@ -92,7 +92,7 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_sensor_value_max'] = {
     init: function() {
-      this.appendDummyInput().appendField("SensorValueMax");
+      this.appendDummyInput().appendField("ค่า Max เซนเซอร์ (SensorValueMax)");
       for (var i = 0; i <= 5; i++) {
         this.appendValueInput("F" + i).setCheck("Number").appendField("maxF" + i);
       }
@@ -122,7 +122,7 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_distance_cm'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("sonar.ping_cm()");
+          .appendField("ระยะโซนาร์ (sonar.ping_cm())");
       this.setInputsInline(true);
       this.setOutput(true, "Number");
       this.setColour(COLOUR);

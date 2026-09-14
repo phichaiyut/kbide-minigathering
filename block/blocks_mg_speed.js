@@ -17,10 +17,10 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_set_balance_speed'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("setBalanceSpeed  ch")
+          .appendField("ปรับสมดุลความเร็วเดินหน้า (setBalanceSpeed)  ช่วงความเร็ว")
           .appendField(new Blockly.FieldDropdown(SPEED_CH_OPTIONS), "CH");
-      this.appendValueInput("SPDL").setCheck("Number").appendField("spdL");
-      this.appendValueInput("SPDR").setCheck("Number").appendField("spdR");
+      this.appendValueInput("SPDL").setCheck("Number").appendField("ความเร็วซ้าย");
+      this.appendValueInput("SPDR").setCheck("Number").appendField("ความเร็วขวา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -33,10 +33,10 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_set_balance_back_speed'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("setBalanceBackSpeed  ch")
+          .appendField("ปรับสมดุลความเร็วถอยหลัง (setBalanceBackSpeed)  ช่วงความเร็ว")
           .appendField(new Blockly.FieldDropdown(SPEED_CH_OPTIONS), "CH");
-      this.appendValueInput("SPDL").setCheck("Number").appendField("spdL");
-      this.appendValueInput("SPDR").setCheck("Number").appendField("spdR");
+      this.appendValueInput("SPDL").setCheck("Number").appendField("ความเร็วซ้าย");
+      this.appendValueInput("SPDR").setCheck("Number").appendField("ความเร็วขวา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -49,10 +49,10 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_set_kp_kd'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("setKpKd  ch")
+          .appendField("ตั้งค่า Kp Kd (setKpKd)  ช่วงความเร็ว")
           .appendField(new Blockly.FieldDropdown(SPEED_CH_OPTIONS), "CH");
-      this.appendValueInput("KP").setCheck("Number").appendField("kp");
-      this.appendValueInput("KD").setCheck("Number").appendField("kd");
+      this.appendValueInput("KP").setCheck("Number").appendField("Kp");
+      this.appendValueInput("KD").setCheck("Number").appendField("Kd");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -65,14 +65,14 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_mode_spd_pid'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("ModeSpdPID  Mod")
+          .appendField("โหมดจำกัดความเร็ว (ModeSpdPID)  โหมด")
           .appendField(new Blockly.FieldDropdown([
             ["0", "0"],
             ["1", "1"],
             ["2", "2"]
           ]), "MODE");
-      this.appendValueInput("MAX").setCheck("Number").appendField("max");
-      this.appendValueInput("MIN").setCheck("Number").appendField("min");
+      this.appendValueInput("MAX").setCheck("Number").appendField("สูงสุด");
+      this.appendValueInput("MIN").setCheck("Number").appendField("ต่ำสุด");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -86,7 +86,7 @@ module.exports = function(Blockly){
     init: function() {
       this.appendValueInput("X")
           .setCheck("Number")
-          .appendField("SetCenter  x");
+          .appendField("ตั้งค่ากึ่งกลาง (SetCenter)  ค่า");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -98,8 +98,8 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_pid'] = {
     init: function() {
-      this.appendValueInput("SPEEDL").setCheck("Number").appendField("PID  SpeedL");
-      this.appendValueInput("SPEEDR").setCheck("Number").appendField("SpeedR");
+      this.appendValueInput("SPEEDL").setCheck("Number").appendField("คำนวณ PID (PID)  ความเร็วซ้าย");
+      this.appendValueInput("SPEEDR").setCheck("Number").appendField("ความเร็วขวา");
       this.appendValueInput("KP").setCheck("Number").appendField("Kp");
       this.appendValueInput("KD").setCheck("Number").appendField("Kd");
       this.setInputsInline(true);
@@ -113,8 +113,8 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_read_position'] = {
     init: function() {
-      this.appendValueInput("TRACK").setCheck("Number").appendField("readPosition  Track");
-      this.appendValueInput("NOISE").setCheck("Number").appendField("noise");
+      this.appendValueInput("TRACK").setCheck("Number").appendField("อ่านตำแหน่งเส้น (readPosition)  เส้น");
+      this.appendValueInput("NOISE").setCheck("Number").appendField("สัญญาณรบกวน");
       this.setInputsInline(true);
       this.setOutput(true, "Number");
       this.setColour(COLOUR);

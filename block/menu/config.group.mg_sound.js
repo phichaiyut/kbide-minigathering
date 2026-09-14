@@ -3,7 +3,7 @@ function num(name, value) {
 }
 
 module.exports = {
-    name: "Sound &amp; Button",
+    name: "เสียง/ปุ่ม (Sound &amp; Button)",
     index: 13,
     color: "45",
     icon: "/static/icons/buzzer.png",

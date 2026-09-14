@@ -3,7 +3,7 @@ function num(name, value) {
 }
 
 module.exports = {
-    name: "Turning",
+    name: "เลี้ยว/หมุน (Turning)",
     index: 16,
     color: "120",
     icon: "/static/icons/icons8_repeat_96px.png",

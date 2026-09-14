@@ -6,10 +6,10 @@ module.exports = function(Blockly){
     init: function() {
       this.appendValueInput("L")
           .setCheck("Number")
-          .appendField("Motor  L");
+          .appendField("มอเตอร์ (Motor)  ซ้าย");
       this.appendValueInput("R")
           .setCheck("Number")
-          .appendField("R");
+          .appendField("ขวา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -23,7 +23,7 @@ module.exports = function(Blockly){
     init: function() {
       this.appendValueInput("SPEED")
           .setCheck("Number")
-          .appendField("Motor1  spd");
+          .appendField("มอเตอร์ซ้าย (Motor1)  ความเร็ว");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -37,7 +37,7 @@ module.exports = function(Blockly){
     init: function() {
       this.appendValueInput("SPEED")
           .setCheck("Number")
-          .appendField("Motor2  spd");
+          .appendField("มอเตอร์ขวา (Motor2)  ความเร็ว");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -50,7 +50,7 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_motor_stop'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("MotorStop");
+          .appendField("หยุดมอเตอร์ (MotorStop)");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -64,7 +64,7 @@ module.exports = function(Blockly){
     init: function() {
       this.appendValueInput("MS")
           .setCheck("Number")
-          .appendField("MotorStop  de");
+          .appendField("หยุดมอเตอร์ (MotorStop)  หน่วงเวลา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -78,13 +78,13 @@ module.exports = function(Blockly){
     init: function() {
       this.appendValueInput("L")
           .setCheck("Number")
-          .appendField("Move  l");
+          .appendField("เคลื่อนที่ (Move)  ซ้าย");
       this.appendValueInput("R")
           .setCheck("Number")
-          .appendField("r");
+          .appendField("ขวา");
       this.appendValueInput("MS")
           .setCheck("Number")
-          .appendField("de");
+          .appendField("หน่วงเวลา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -96,17 +96,17 @@ module.exports = function(Blockly){
 
   // ---- one-speed continuous-drive family: fd/bk/sl/sr/tl/tr — no delay, keeps driving until changed ----
   var ONE_SPEED = [
-    { type: 'mg_fd', label: "fd",  tooltip: "fd(speed) — Drives forward at speed on both wheels. Returns immediately (no delay) — keeps driving until the next motor block.\n\nภาษาไทย: เดินหน้าด้วยความเร็วที่กำหนดทั้งสองล้อ คืนค่าทันที (ไม่หน่วงเวลา) วิ่งต่อไปจนกว่าจะมีบล็อกมอเตอร์ถัดไป" },
-    { type: 'mg_bk', label: "bk",  tooltip: "bk(speed) — Drives backward at speed on both wheels. Returns immediately (no delay).\n\nภาษาไทย: ถอยหลังด้วยความเร็วที่กำหนดทั้งสองล้อ คืนค่าทันที (ไม่หน่วงเวลา)" },
-    { type: 'mg_sl', label: "sl",  tooltip: "sl(speed) — Spins in place to the left (left wheel back, right wheel forward). Returns immediately (no delay).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางซ้าย (ล้อซ้ายถอย ล้อขวาเดินหน้า) คืนค่าทันที (ไม่หน่วงเวลา)" },
-    { type: 'mg_sr', label: "sr",  tooltip: "sr(speed) — Spins in place to the right (left wheel forward, right wheel back). Returns immediately (no delay).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางขวา (ล้อซ้ายเดินหน้า ล้อขวาถอย) คืนค่าทันที (ไม่หน่วงเวลา)" },
-    { type: 'mg_tl', label: "tl",  tooltip: "tl(speed) — Pivots left by driving only the right wheel. Returns immediately (no delay).\n\nภาษาไทย: เลี้ยวซ้ายโดยขับเฉพาะล้อขวา คืนค่าทันที (ไม่หน่วงเวลา)" },
-    { type: 'mg_tr', label: "tr",  tooltip: "tr(speed) — Pivots right by driving only the left wheel. Returns immediately (no delay).\n\nภาษาไทย: เลี้ยวขวาโดยขับเฉพาะล้อซ้าย คืนค่าทันที (ไม่หน่วงเวลา)" }
+    { type: 'mg_fd', label: "เดินหน้า (fd)",  tooltip: "fd(speed) — Drives forward at speed on both wheels. Returns immediately (no delay) — keeps driving until the next motor block.\n\nภาษาไทย: เดินหน้าด้วยความเร็วที่กำหนดทั้งสองล้อ คืนค่าทันที (ไม่หน่วงเวลา) วิ่งต่อไปจนกว่าจะมีบล็อกมอเตอร์ถัดไป" },
+    { type: 'mg_bk', label: "ถอยหลัง (bk)",  tooltip: "bk(speed) — Drives backward at speed on both wheels. Returns immediately (no delay).\n\nภาษาไทย: ถอยหลังด้วยความเร็วที่กำหนดทั้งสองล้อ คืนค่าทันที (ไม่หน่วงเวลา)" },
+    { type: 'mg_sl', label: "หมุนซ้ายอยู่กับที่ (sl)",  tooltip: "sl(speed) — Spins in place to the left (left wheel back, right wheel forward). Returns immediately (no delay).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางซ้าย (ล้อซ้ายถอย ล้อขวาเดินหน้า) คืนค่าทันที (ไม่หน่วงเวลา)" },
+    { type: 'mg_sr', label: "หมุนขวาอยู่กับที่ (sr)",  tooltip: "sr(speed) — Spins in place to the right (left wheel forward, right wheel back). Returns immediately (no delay).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางขวา (ล้อซ้ายเดินหน้า ล้อขวาถอย) คืนค่าทันที (ไม่หน่วงเวลา)" },
+    { type: 'mg_tl', label: "เลี้ยวซ้ายล้อเดียว (tl)",  tooltip: "tl(speed) — Pivots left by driving only the right wheel. Returns immediately (no delay).\n\nภาษาไทย: เลี้ยวซ้ายโดยขับเฉพาะล้อขวา คืนค่าทันที (ไม่หน่วงเวลา)" },
+    { type: 'mg_tr', label: "เลี้ยวขวาล้อเดียว (tr)",  tooltip: "tr(speed) — Pivots right by driving only the left wheel. Returns immediately (no delay).\n\nภาษาไทย: เลี้ยวขวาโดยขับเฉพาะล้อซ้าย คืนค่าทันที (ไม่หน่วงเวลา)" }
   ];
   ONE_SPEED.forEach(function(def) {
     Blockly.Blocks[def.type] = {
       init: function() {
-        this.appendValueInput("SPEED").setCheck("Number").appendField(def.label + "  speed");
+        this.appendValueInput("SPEED").setCheck("Number").appendField(def.label + "  ความเร็ว");
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -119,14 +119,14 @@ module.exports = function(Blockly){
 
   // ---- two-speed continuous-drive family: fd2/bk2 — independent left/right speed, no delay ----
   var TWO_SPEED = [
-    { type: 'mg_fd2', label: "fd2", tooltip: "fd2(speedL, speedR) — Drives forward with independent left/right speeds (same as Motor). Returns immediately (no delay).\n\nภาษาไทย: เดินหน้าโดยกำหนดความเร็วซ้าย-ขวาแยกกันเอง (เหมือน Motor) คืนค่าทันที (ไม่หน่วงเวลา)" },
-    { type: 'mg_bk2', label: "bk2", tooltip: "bk2(speedL, speedR) — Drives backward with independent left/right speeds. Returns immediately (no delay).\n\nภาษาไทย: ถอยหลังโดยกำหนดความเร็วซ้าย-ขวาแยกกันเอง คืนค่าทันที (ไม่หน่วงเวลา)" }
+    { type: 'mg_fd2', label: "เดินหน้า 2 ความเร็ว (fd2)", tooltip: "fd2(speedL, speedR) — Drives forward with independent left/right speeds (same as Motor). Returns immediately (no delay).\n\nภาษาไทย: เดินหน้าโดยกำหนดความเร็วซ้าย-ขวาแยกกันเอง (เหมือน Motor) คืนค่าทันที (ไม่หน่วงเวลา)" },
+    { type: 'mg_bk2', label: "ถอยหลัง 2 ความเร็ว (bk2)", tooltip: "bk2(speedL, speedR) — Drives backward with independent left/right speeds. Returns immediately (no delay).\n\nภาษาไทย: ถอยหลังโดยกำหนดความเร็วซ้าย-ขวาแยกกันเอง คืนค่าทันที (ไม่หน่วงเวลา)" }
   ];
   TWO_SPEED.forEach(function(def) {
     Blockly.Blocks[def.type] = {
       init: function() {
-        this.appendValueInput("SPEEDL").setCheck("Number").appendField(def.label + "  speedL");
-        this.appendValueInput("SPEEDR").setCheck("Number").appendField("speedR");
+        this.appendValueInput("SPEEDL").setCheck("Number").appendField(def.label + "  ความเร็วซ้าย");
+        this.appendValueInput("SPEEDR").setCheck("Number").appendField("ความเร็วขวา");
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);

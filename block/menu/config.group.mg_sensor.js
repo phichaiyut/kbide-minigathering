@@ -3,7 +3,7 @@ function num(name, value) {
 }
 
 module.exports = {
-    name: "Sensor",
+    name: "เซนเซอร์ (Sensor)",
     index: 14,
     color: "200",
     icon: "/static/icons/icons8_thermometer_automation_96px.png",

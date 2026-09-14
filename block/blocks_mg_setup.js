@@ -4,7 +4,7 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_robotsetup'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("robotsetup");
+          .appendField("ตั้งค่าหุ่นยนต์ (robotsetup)");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -17,7 +17,7 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_wait_start'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("wait_start");
+          .appendField("รอปุ่มเริ่ม (wait_start)");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);

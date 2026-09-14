@@ -22,11 +22,11 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_turn_speed_left'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("TurnSpeedLeft  Ch")
+          .appendField("ตั้งค่าเลี้ยวซ้าย (TurnSpeedLeft)  เซนเซอร์")
           .appendField(new Blockly.FieldDropdown(SENSOR_OPTIONS), "CH");
-      this.appendValueInput("L").setCheck("Number").appendField("l");
-      this.appendValueInput("R").setCheck("Number").appendField("r");
-      this.appendValueInput("DE").setCheck("Number").appendField("de");
+      this.appendValueInput("L").setCheck("Number").appendField("ซ้าย");
+      this.appendValueInput("R").setCheck("Number").appendField("ขวา");
+      this.appendValueInput("DE").setCheck("Number").appendField("หน่วงเวลา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -39,11 +39,11 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_turn_speed_right'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("TurnSpeedRight  Ch")
+          .appendField("ตั้งค่าเลี้ยวขวา (TurnSpeedRight)  เซนเซอร์")
           .appendField(new Blockly.FieldDropdown(SENSOR_OPTIONS), "CH");
-      this.appendValueInput("L").setCheck("Number").appendField("l");
-      this.appendValueInput("R").setCheck("Number").appendField("r");
-      this.appendValueInput("DE").setCheck("Number").appendField("de");
+      this.appendValueInput("L").setCheck("Number").appendField("ซ้าย");
+      this.appendValueInput("R").setCheck("Number").appendField("ขวา");
+      this.appendValueInput("DE").setCheck("Number").appendField("หน่วงเวลา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -55,7 +55,7 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_set_turn_speed'] = {
     init: function() {
-      this.appendValueInput("SPD").setCheck("Number").appendField("SetTurnSpeed  tspdv");
+      this.appendValueInput("SPD").setCheck("Number").appendField("ตั้งความเร็วหมุน (SetTurnSpeed)  ความเร็ว");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -67,7 +67,7 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_set_to_center_speed'] = {
     init: function() {
-      this.appendValueInput("SPD").setCheck("Number").appendField("SetToCenterSpeed  tctv");
+      this.appendValueInput("SPD").setCheck("Number").appendField("ตั้งความเร็วเข้ากึ่งกลาง (SetToCenterSpeed)  ความเร็ว");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -79,7 +79,7 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_delay_c_f'] = {
     init: function() {
-      this.appendValueInput("DE").setCheck("Number").appendField("Delay_c_F  de");
+      this.appendValueInput("DE").setCheck("Number").appendField("ตัวหารเวลาเข้ากึ่งกลาง (Delay_c_F)  ค่า");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -89,11 +89,11 @@ module.exports = function(Blockly){
     }
   };
 
-  zeroArgBlock('mg_to_center', "ToCenter", "ToCenter() — Moves the robot toward the line center before turning (set speed/delay first).\n\nภาษาไทย: ขยับหุ่นยนต์เข้าหากึ่งกลางเส้นก่อนเลี้ยว (ตั้งความเร็ว/เวลาไว้ก่อน)");
-  zeroArgBlock('mg_turn_left', "TurnLeft", "TurnLeft() — Turns left until the configured sensor detects the line (set TurnSpeedLeft first).\n\nภาษาไทย: เลี้ยวซ้ายจนกว่าเซนเซอร์ที่ตั้งไว้จะเจอเส้น (ตั้งค่า TurnSpeedLeft ก่อน)");
-  zeroArgBlock('mg_turn_right', "TurnRight", "TurnRight() — Turns right until the configured sensor detects the line (set TurnSpeedRight first).\n\nภาษาไทย: เลี้ยวขวาจนกว่าเซนเซอร์ที่ตั้งไว้จะเจอเส้น (ตั้งค่า TurnSpeedRight ก่อน)");
-  zeroArgBlock('mg_spin_left', "SpinL", "SpinL() — Spins in place to the left until the line is detected (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางซ้ายจนกว่าจะเจอเส้น (ตั้งความเร็วหมุนก่อน)");
-  zeroArgBlock('mg_spin_left2', "SpinL2", "SpinL2() — Spins in place to the left using a second timing pattern (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางซ้ายด้วยจังหวะเวลาแบบที่สอง (ตั้งความเร็วหมุนก่อน)");
-  zeroArgBlock('mg_spin_right', "SpinR", "SpinR() — Spins in place to the right until the line is detected (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางขวาจนกว่าจะเจอเส้น (ตั้งความเร็วหมุนก่อน)");
-  zeroArgBlock('mg_spin_right2', "SpinR2", "SpinR2() — Spins in place to the right using a second timing pattern (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางขวาด้วยจังหวะเวลาแบบที่สอง (ตั้งความเร็วหมุนก่อน)");
+  zeroArgBlock('mg_to_center', "เข้ากึ่งกลางเส้น (ToCenter)", "ToCenter() — Moves the robot toward the line center before turning (set speed/delay first).\n\nภาษาไทย: ขยับหุ่นยนต์เข้าหากึ่งกลางเส้นก่อนเลี้ยว (ตั้งความเร็ว/เวลาไว้ก่อน)");
+  zeroArgBlock('mg_turn_left', "เลี้ยวซ้าย (TurnLeft)", "TurnLeft() — Turns left until the configured sensor detects the line (set TurnSpeedLeft first).\n\nภาษาไทย: เลี้ยวซ้ายจนกว่าเซนเซอร์ที่ตั้งไว้จะเจอเส้น (ตั้งค่า TurnSpeedLeft ก่อน)");
+  zeroArgBlock('mg_turn_right', "เลี้ยวขวา (TurnRight)", "TurnRight() — Turns right until the configured sensor detects the line (set TurnSpeedRight first).\n\nภาษาไทย: เลี้ยวขวาจนกว่าเซนเซอร์ที่ตั้งไว้จะเจอเส้น (ตั้งค่า TurnSpeedRight ก่อน)");
+  zeroArgBlock('mg_spin_left', "หมุนซ้าย (SpinL)", "SpinL() — Spins in place to the left until the line is detected (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางซ้ายจนกว่าจะเจอเส้น (ตั้งความเร็วหมุนก่อน)");
+  zeroArgBlock('mg_spin_left2', "หมุนซ้าย 2 (SpinL2)", "SpinL2() — Spins in place to the left using a second timing pattern (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางซ้ายด้วยจังหวะเวลาแบบที่สอง (ตั้งความเร็วหมุนก่อน)");
+  zeroArgBlock('mg_spin_right', "หมุนขวา (SpinR)", "SpinR() — Spins in place to the right until the line is detected (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางขวาจนกว่าจะเจอเส้น (ตั้งความเร็วหมุนก่อน)");
+  zeroArgBlock('mg_spin_right2', "หมุนขวา 2 (SpinR2)", "SpinR2() — Spins in place to the right using a second timing pattern (set spin speed first).\n\nภาษาไทย: หมุนอยู่กับที่ไปทางขวาด้วยจังหวะเวลาแบบที่สอง (ตั้งความเร็วหมุนก่อน)");
 };

@@ -11,12 +11,12 @@ function ffBlock(type) {
 }
 
 module.exports = {
-    name: "Line Follow",
+    name: "เดินตามเส้น (Line Follow)",
     index: 17,
     color: "15",
     icon: "/static/icons/icons8_workflow_128px.png",
     blocks: [
-        { xml: `<sep gap="16"></sep><label text="Timed Moves" web-class="headline"></label>` },
+        { xml: `<sep gap="16"></sep><label text="เคลื่อนที่ตามเวลา" web-class="headline"></label>` },
         timedMove('mg_forward'),
         timedMove('mg_backward'),
         timedMove('mg_pivot_left'),
@@ -24,7 +24,7 @@ module.exports = {
         timedMove('mg_spin_left_time'),
         timedMove('mg_spin_right_time'),
 
-        { xml: `<sep gap="16"></sep><label text="Follow Line until Junction" web-class="headline"></label>` },
+        { xml: `<sep gap="16"></sep><label text="เดินตามเส้นจนถึงทางแยก" web-class="headline"></label>` },
         ffBlock('mg_ff'),
         ffBlock('mg_ffc'),
         ffBlock('mg_ffc2'),
@@ -39,7 +39,7 @@ module.exports = {
         { xml: `<block type="mg_ffnum">${num('SPEED', 50)}</block>` },
         { xml: `<block type="mg_ff_distanced">${num('SPEED', 50)}${num('DIST', 10)}</block>` },
 
-        { xml: `<sep gap="16"></sep><label text="Follow Line for Time / Manual Action" web-class="headline"></label>` },
+        { xml: `<sep gap="16"></sep><label text="เดินตามเส้นตามเวลา / ทำคำสั่งเอง" web-class="headline"></label>` },
         { xml: `<block type="mg_ff_timer">${num('SPEED', 50)}${num('TIME', 1000)}</block>` },
         { xml: `<block type="mg_ff_timer_select">${num('SPEED', 50)}${num('TIME', 1000)}</block>` },
         { xml: `<block type="mg_track_select">${num('SPD', 50)}</block>` },

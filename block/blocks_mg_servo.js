@@ -16,27 +16,27 @@ module.exports = function(Blockly){
     };
   }
 
-  zeroArgBlock('mg_servo_setup', "servoSetup",
+  zeroArgBlock('mg_servo_setup', "ตั้งค่าเซอร์โว (servoSetup)",
     "servoSetup() — Attaches servo_gripper (pin 14) and servo_base (pin 12). Call once in setup, before any other Servo block.\n\nภาษาไทย: ต่อเซอร์โวมือจับ (ขา 14) และแขนกล (ขา 12) เข้ากับขาสัญญาณ เรียกครั้งเดียวใน setup ก่อนบล็อกเซอร์โวอื่นเสมอ");
-  zeroArgBlock('mg_serial_servo_control', "SerialServoControl",
+  zeroArgBlock('mg_serial_servo_control', "ควบคุมเซอร์โวผ่าน Serial (SerialServoControl)",
     "SerialServoControl() — Interactive servo jog over Serial Monitor: type \"1 90\" to move servo_base, \"2 90\" to move servo_gripper, or \"exit\" to return. Blocks (loops forever) until you type exit — useful for finding calibration angles, not for normal runs.\n\nภาษาไทย: ปรับมุมเซอร์โวแบบโต้ตอบผ่าน Serial Monitor พิมพ์ \"1 90\" เพื่อขยับแขนกล, \"2 90\" เพื่อขยับมือจับ หรือพิมพ์ \"exit\" เพื่อออก บล็อกโปรแกรมไว้ (วนลูปค้าง) จนกว่าจะพิมพ์ exit ใช้หาค่ามุมตอนคาลิเบรต ไม่เหมาะใช้งานจริง");
-  zeroArgBlock('mg_servo_up', "servo_up",
+  zeroArgBlock('mg_servo_up', "ยกแขนสุด (servo_up)",
     "servo_up() — Raises the arm base to a fixed angle (s_up = 70°).\n\nภาษาไทย: ยกแขนกลขึ้นที่มุมคงที่ (s_up = 70°)");
-  zeroArgBlock('mg_servo_up45', "servo_up45",
+  zeroArgBlock('mg_servo_up45', "ยกแขนครึ่งหนึ่ง (servo_up45)",
     "servo_up45() — Raises the arm base to a fixed angle (s_up45 = 90°).\n\nภาษาไทย: ยกแขนกลขึ้นครึ่งหนึ่งที่มุมคงที่ (s_up45 = 90°)");
-  zeroArgBlock('mg_servo_down', "servo_down",
+  zeroArgBlock('mg_servo_down', "วางแขนลง (servo_down)",
     "servo_down() — Lowers the arm base to a fixed angle (s_down = 150°).\n\nภาษาไทย: วางแขนกลลงที่มุมคงที่ (s_down = 150°)");
-  zeroArgBlock('mg_servo_open', "servo_open",
+  zeroArgBlock('mg_servo_open', "อ้ามือจับ (servo_open)",
     "servo_open() — Opens the gripper to a fixed angle (s_open = 170°).\n\nภาษาไทย: อ้ามือจับที่มุมคงที่ (s_open = 170°)");
-  zeroArgBlock('mg_servo_close_small', "servo_close_small",
+  zeroArgBlock('mg_servo_close_small', "หุบจับชิ้นเล็ก (servo_close_small)",
     "servo_close_small() — Closes the gripper to grip a small object (s_closesmall = 90°).\n\nภาษาไทย: หุบมือจับเพื่อจับวัตถุชิ้นเล็กที่มุมคงที่ (s_closesmall = 90°)");
-  zeroArgBlock('mg_servo_close_big', "servo_close_big",
+  zeroArgBlock('mg_servo_close_big', "หุบจับชิ้นใหญ่ (servo_close_big)",
     "servo_close_big() — Closes the gripper to grip a large object (s_closebig = 120°).\n\nภาษาไทย: หุบมือจับเพื่อจับวัตถุชิ้นใหญ่ที่มุมคงที่ (s_closebig = 120°)");
 
   Blockly.Blocks['mg_servo'] = {
     init: function() {
-      this.appendValueInput("DE1").setCheck("Number").appendField("servo  de1");
-      this.appendValueInput("DE2").setCheck("Number").appendField("de2");
+      this.appendValueInput("DE1").setCheck("Number").appendField("เซอร์โว (servo)  มุมแขน");
+      this.appendValueInput("DE2").setCheck("Number").appendField("มุมมือจับ");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -48,7 +48,7 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_arm_base'] = {
     init: function() {
-      this.appendValueInput("ANGLE").setCheck("Number").appendField("arm_base  angle");
+      this.appendValueInput("ANGLE").setCheck("Number").appendField("มุมแขน (arm_base)  มุม");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -60,7 +60,7 @@ module.exports = function(Blockly){
 
   Blockly.Blocks['mg_arm_gripper'] = {
     init: function() {
-      this.appendValueInput("ANGLE").setCheck("Number").appendField("arm_gripper  angle");
+      this.appendValueInput("ANGLE").setCheck("Number").appendField("มุมมือจับ (arm_gripper)  มุม");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -71,10 +71,10 @@ module.exports = function(Blockly){
   };
 
   var PRESET_OPTIONS = [
-    ["s_up", "s_up"],
-    ["s_up45", "s_up45"],
-    ["s_down", "s_down"],
-    ["s_ready", "s_ready"],
+    ["s_up (ยกสุด)", "s_up"],
+    ["s_up45 (ยกครึ่งหนึ่ง)", "s_up45"],
+    ["s_down (วางลง)", "s_down"],
+    ["s_ready (ท่าพร้อม)", "s_ready"],
     ["s_open (อ้า)", "s_open"],
     ["s_closesmall (จับลูกเล็ก)", "s_closesmall"],
     ["s_closebig (จับลูกใหญ่)", "s_closebig"]
@@ -83,9 +83,9 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_set_servo_preset'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("Set")
+          .appendField("ตั้งค่า (Set)")
           .appendField(new Blockly.FieldDropdown(PRESET_OPTIONS), "VAR");
-      this.appendValueInput("VALUE").setCheck("Number").appendField("to");
+      this.appendValueInput("VALUE").setCheck("Number").appendField("เท่ากับ");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);

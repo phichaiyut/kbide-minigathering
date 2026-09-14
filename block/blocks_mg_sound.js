@@ -16,17 +16,17 @@ module.exports = function(Blockly){
     };
   }
 
-  zeroArgBlock('mg_beep', "beep", "beep() — Buzzer sounds briefly, about 50 ms.\n\nภาษาไทย: บัซเซอร์ดังสั้น ๆ ประมาณ 50 มิลลิวินาที");
-  zeroArgBlock('mg_buzzer_on', "BZon", "BZon() — Turns the buzzer on and holds it. Must be paired with BZoff.\n\nภาษาไทย: เปิดเสียงบัซเซอร์ค้างไว้ ต้องใช้คู่กับ BZoff เสมอ");
-  zeroArgBlock('mg_buzzer_off', "BZoff", "BZoff() — Turns off a buzzer left on.\n\nภาษาไทย: ปิดเสียงบัซเซอร์ที่เปิดค้างไว้");
-  zeroArgBlock('mg_fast_beep', "fastBeep", "fastBeep() — Buzzer sounds very briefly, about 15 ms.\n\nภาษาไทย: บัซเซอร์ดังสั้นมาก ประมาณ 15 มิลลิวินาที");
-  zeroArgBlock('mg_wait_ok', "WaitOK", "WaitOK() — Waits until the button is pressed, then beeps to confirm.\n\nภาษาไทย: หยุดรอจนกว่าจะกดปุ่ม แล้วบี๊บยืนยัน");
+  zeroArgBlock('mg_beep', "บี๊บ (beep)", "beep() — Buzzer sounds briefly, about 50 ms.\n\nภาษาไทย: บัซเซอร์ดังสั้น ๆ ประมาณ 50 มิลลิวินาที");
+  zeroArgBlock('mg_buzzer_on', "เปิดเสียง (BZon)", "BZon() — Turns the buzzer on and holds it. Must be paired with BZoff.\n\nภาษาไทย: เปิดเสียงบัซเซอร์ค้างไว้ ต้องใช้คู่กับ BZoff เสมอ");
+  zeroArgBlock('mg_buzzer_off', "ปิดเสียง (BZoff)", "BZoff() — Turns off a buzzer left on.\n\nภาษาไทย: ปิดเสียงบัซเซอร์ที่เปิดค้างไว้");
+  zeroArgBlock('mg_fast_beep', "บี๊บสั้น (fastBeep)", "fastBeep() — Buzzer sounds very briefly, about 15 ms.\n\nภาษาไทย: บัซเซอร์ดังสั้นมาก ประมาณ 15 มิลลิวินาที");
+  zeroArgBlock('mg_wait_ok', "รอกดปุ่มยืนยัน (WaitOK)", "WaitOK() — Waits until the button is pressed, then beeps to confirm.\n\nภาษาไทย: หยุดรอจนกว่าจะกดปุ่ม แล้วบี๊บยืนยัน");
 
   Blockly.Blocks['mg_beep_ms'] = {
     init: function() {
       this.appendValueInput("MS")
           .setCheck("Number")
-          .appendField("Beep  de");
+          .appendField("บี๊บ (Beep)  หน่วงเวลา");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -39,7 +39,7 @@ module.exports = function(Blockly){
   Blockly.Blocks['mg_button_pressed'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("OK_PUSH");
+          .appendField("ปุ่มถูกกด (OK_PUSH)");
       this.setInputsInline(true);
       this.setOutput(true, "Boolean");
       this.setColour(COLOUR);

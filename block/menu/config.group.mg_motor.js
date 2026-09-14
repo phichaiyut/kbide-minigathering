@@ -3,7 +3,7 @@ function num(name, value) {
 }
 
 module.exports = {
-    name: "Motor",
+    name: "มอเตอร์ (Motor)",
     index: 12,
     color: "290",
     icon: "/static/icons/icons8_exercise_96px.png",
@@ -14,7 +14,7 @@ module.exports = {
         "mg_motor_stop",
         { xml: `<block type="mg_motor_stop_delay">${num('MS', 100)}</block>` },
         { xml: `<block type="mg_move">${num('L', 50)}${num('R', 50)}${num('MS', 500)}</block>` },
-        { xml: `<sep gap="16"></sep><label text="Continuous Drive (no delay)" web-class="headline"></label>` },
+        { xml: `<sep gap="16"></sep><label text="ขับเคลื่อนต่อเนื่อง (ไม่หน่วงเวลา)" web-class="headline"></label>` },
         { xml: `<block type="mg_fd">${num('SPEED', 50)}</block>` },
         { xml: `<block type="mg_bk">${num('SPEED', 50)}</block>` },
         { xml: `<block type="mg_sl">${num('SPEED', 50)}</block>` },
